@@ -10,45 +10,61 @@
   <link rel="stylesheet" type="text/css" href="https://foschool.github.io/Frotend/style.css">
   <style>
     body {
+      font-family: "Raleway", sans-serif;
       background-image: url('https://images.unsplash.com/photo-1575110170591-983f78ecedab?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTU3MTE2MTZ8&ixlib=rb-4.0.3&q=85');
+      margin: 0;
     }
 
-    body,
-    h1 {
-      font-family: "Raleway", sans-serif
+    .content {
+      padding-top: 20vh; /* Adjust as per your need */
+      height: calc(100vh - 20vh); /* Adjust to leave space for the header */
+      overflow-y: auto; /* Enable vertical scrolling */
     }
 
-    body,
-    html {
-      height: 100%
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      z-index: 1; /* Ensure header stays on top of other content */
     }
 
-    .bgimg {
-      background-image: url('/w3images/forestbridge.jpg');
-      min-height: 100%;
-      background-position: center;
-      background-size: cover;
+    .tabs {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1; /* Ensure tabs stay on top of other content */
+    }
+
+    .tabs a {
+      color: white;
+      margin-left: 10px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-    <div class="w3-display-topleft w3-padding-large w3-xlarge">
-      CookBuddies
-    </div>
-    <div class="w3-display-middle">
-      <h1 class="w3-jumbo w3-animate-top">Explore a world of <strong><em>goodness</em></strong></h1>
-      <hr class="w3-border-grey" style="margin:auto;width:40%">
-      <p class="w3-large w3-center">An open source CookBuddies website</p>
-    </div>
-    <div class="w3-display-bottomleft w3-padding-large">
-      <a href="https://github.com/FoSchool/FoSchool.github.io" target="_blank">Source Code</a>
-    </div>
+  <div class="header">
+    CookBuddies
+  </div>
+
+  <div class="tabs">
+    <a href="#contact">Contact Me</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#products">Products</a>
+  </div>
+
+  <div class="content">
+    <h1 class="w3-jumbo w3-animate-top">Explore a world of <strong><em>goodness</em></strong></h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">An open-source CookBuddies website</p>
+    <a href="https://github.com/FoSchool/FoSchool.github.io" target="_blank">Source Code</a>
   </div>
 
 </body>
 
 </html>
-
